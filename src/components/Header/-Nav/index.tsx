@@ -7,6 +7,11 @@ const HeaderNav: FC = () => {
       <ul className={styles.Header__ul}>
         <li>
           <a className={styles.Header__link} href="#">
+            Home
+          </a>
+        </li>
+        <li>
+          <a className={styles.Header__link} href="#">
             Pokédex
           </a>
         </li>
