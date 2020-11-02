@@ -45,12 +45,12 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(png|jpe?g|gif|svg)?$/,
+        test: /\.(woff(2)?|ttf|eot|svg)(png|jpe?g|gif)?$/,
         use: [
           {
             loader: 'file-loader',
             options: {
-              name: 'dist/[contenthash].[ext]',
+              name: 'assets/[contenthash].[ext]',
             },
           },
         ],
