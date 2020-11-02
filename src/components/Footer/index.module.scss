@@ -1,0 +1,26 @@
+$footerAccentColor: #f5db13;
+$footerDangerColor: #d93e30;
+$footerBaseBlack: #212121;
+
+.Footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+  &__link {
+    color: $footerBaseBlack;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $footerDangerColor;
+    }
+  }
+}

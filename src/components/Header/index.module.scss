@@ -1,0 +1,43 @@
+$headerAccentColor: #f5db13;
+$headerDangerColor: #d93e30;
+$headerBaseBlack: #212121;
+
+.Header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 16px;
+  background: $headerAccentColor;
+  box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
+  &__container {
+    display: grid;
+    grid-auto-flow: column;
+    max-width: 1200px;
+    margin: auto;
+  }
+  &__nav {
+    display: grid;
+    align-items: center;
+  }
+  &__logo {
+    width: 157px;
+    height: 63px;
+    background: url('-Logo/img/logo.svg') center/contain no-repeat;
+  }
+  &__ul {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  &__link {
+    color: $headerBaseBlack;
+    text-decoration: none;
+    transition: color 0.2s;
+    &:hover {
+      color: $headerDangerColor;
+    }
+  }
+}
