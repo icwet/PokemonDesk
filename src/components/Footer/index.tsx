@@ -4,7 +4,11 @@ import styles from './index.module.scss';
 interface FooterItems {
   id: number;
   text: string;
-  icon: string;
+  icon?: {
+    value: string;
+    role: string;
+    ariaLabel: string;
+  };
 }
 
 const Footer: FC = () => {
@@ -12,12 +16,15 @@ const Footer: FC = () => {
     {
       id: 0,
       text: 'Make with',
-      icon: '❤️',
+      icon: {
+        value: '❤️',
+        role: 'img',
+        ariaLabel: 'love emoji',
+      },
     },
     {
       id: 1,
       text: 'Ours Team',
-      icon: '',
     },
   ];
 
@@ -28,8 +35,8 @@ const Footer: FC = () => {
           <a key={footerItem.id} className={styles.Footer__link} href="#">
             {footerItem.text}{' '}
             {footerItem.icon && (
-              <span aria-label="love emoji" role="img">
-                {footerItem.icon}
+              <span aria-label={footerItem.icon.ariaLabel} role={footerItem.icon.role}>
+                {footerItem.icon.value}
               </span>
             )}
           </a>
