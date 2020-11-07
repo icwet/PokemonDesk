@@ -11,14 +11,7 @@ interface HeadingProps {
 
 const Heading: FC<Readonly<HeadingProps>> = ({ children, variant }) => {
   const TagName = variant;
-  const variants = {
-    h1: s.h1,
-    h2: s.h2,
-    h3: s.h3,
-    h4: s.h4,
-    h5: s.h5,
-  };
-  return <TagName className={cn(s.root, variants[variant])}>{children}</TagName>;
+  return <TagName className={cn(s.root, s[variant])}>{children}</TagName>;
 };
 
 export default Heading;
