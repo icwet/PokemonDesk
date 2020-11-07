@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 // Components
+import Layout from 'components/Layout';
 import AppLink from 'components/AppLink';
 import FooterContent from 'components/Footer/-Content';
 // Styles
 import s from './index.m.scss';
-import Layout from '../Layout';
 
 interface FooterItems {
   id: number;
