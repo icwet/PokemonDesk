@@ -1,17 +1,21 @@
 import React, { FC } from 'react';
 // Components
+import Layout from 'components/Layout';
 import HeaderLogo from 'components/Header/-Logo';
-import HeaderNav from 'components/Header/-Nav';
+import HeaderMenu from 'components/Header/-Menu';
+import HeaderContent from 'components/Header/-Content';
 // Styles
-import styles from './index.module.scss';
+import s from './index.m.scss';
 
 const Header: FC = () => {
   return (
-    <header className={styles.Header}>
-      <div className={styles.Header__container}>
-        <HeaderLogo />
-        <HeaderNav />
-      </div>
+    <header className={s.root}>
+      <Layout>
+        <HeaderContent>
+          <HeaderLogo />
+          <HeaderMenu />
+        </HeaderContent>
+      </Layout>
     </header>
   );
 };

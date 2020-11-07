@@ -1,0 +1,37 @@
+.root {
+  font-style: normal;
+}
+.h1 {
+  margin: 0;
+  font: {
+    weight: lighter;
+    style: normal;
+    size: 72px;
+  }
+  line-height: 84px;
+  letter-spacing: 4px;
+}
+.h2 {
+  font: {
+    size: 35px;
+    style: normal;
+    weight: normal;
+  }
+  line-height: 41px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+.h3 {
+  font: {
+    size: 18px;
+    style: normal;
+    weight: bold;
+  }
+  line-height: 21px;
+}
+.h4 {
+  color: inherit;
+}
+.h5 {
+  color: inherit;
+}

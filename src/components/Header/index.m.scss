@@ -1,0 +1,11 @@
+@import 'src/styles/variables.scss';
+
+.root {
+  max-height: 93px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 16px;
+  background: $third;
+  box-shadow: 0 4px 16px rgba(1, 28, 64, 0.2);
+}

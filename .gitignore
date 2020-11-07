@@ -1,4 +1,4 @@
 node_modules
 .idea
 .DS_Store
-src/**/**module.scss.d.ts
+src/**/**m.scss.d.ts
