@@ -10,7 +10,7 @@ interface AppLinkProps {
   href: string;
 }
 
-const AppLink: FC<AppLinkProps> = ({ children, href, linkText, classNames }) => {
+const AppLink: FC<Readonly<AppLinkProps>> = ({ children, href, linkText, classNames }) => {
   return (
     <Link to={href} className={cn(s.root, classNames)}>
       <span>{linkText}</span>

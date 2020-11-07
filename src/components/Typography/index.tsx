@@ -11,14 +11,9 @@ interface TypographyProps {
   size: TypographySize;
 }
 
-const Typography: FC<TypographyProps> = ({ children, variant, size }) => {
+const Typography: FC<Readonly<TypographyProps>> = ({ children, variant, size }) => {
   const TagName = variant;
-  const sizes = {
-    small: s.small,
-    normal: s.normal,
-    big: s.big,
-  };
-  return <TagName className={cn(s.root, sizes[size])}>{children}</TagName>;
+  return <TagName className={cn(s.root, s[size])}>{children}</TagName>;
 };
 
 export default Typography;

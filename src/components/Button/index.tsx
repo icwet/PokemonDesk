@@ -16,23 +16,12 @@ interface ButtonProps {
 }
 
 const Button: FC<Readonly<ButtonProps>> = ({ text, size, theme, href }) => {
-  const sizes = {
-    default: s.default,
-    small: s.small,
-    large: s.large,
-  };
-
-  const themes = {
-    green: s.green,
-    yellow: s.yellow,
-    blue: s.blue,
-  };
   return href ? (
-    <Link to={href} className={cn(s.root, sizes[size], themes[theme])}>
+    <Link to={href} className={cn(s.root, s[size], s[theme])}>
       {text}
     </Link>
   ) : (
-    <button type="button" className={cn(s.root, sizes[size], themes[theme])}>
+    <button type="button" className={cn(s.root, s[size], s[theme])}>
       {text}
     </button>
   );

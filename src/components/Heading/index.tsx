@@ -9,7 +9,7 @@ interface HeadingProps {
   variant: HeadingVariants;
 }
 
-const Heading: FC<HeadingProps> = ({ children, variant }) => {
+const Heading: FC<Readonly<HeadingProps>> = ({ children, variant }) => {
   const TagName = variant;
   const variants = {
     h1: s.h1,
