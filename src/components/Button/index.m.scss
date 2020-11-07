@@ -1,0 +1,49 @@
+@import 'src/styles/variables';
+
+.root {
+  font-family: Karla, sans-serif;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: currentColor;
+  overflow: hidden;
+}
+
+.small {
+  width: max-content;
+  padding: 4px 8px;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  font-size: 12px;
+  line-height: 14px;
+  &:active {
+    box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.18);
+  }
+}
+.default {
+  max-width: 600px;
+  width: max-content;
+  padding: 17px 36px 26px;
+  font-weight: bold;
+  font-size: 23px;
+  box-shadow: inset 0px -9px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  transition: box-shadow 0.1s;
+  &:active {
+    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  }
+}
+.large {
+  width: 100%;
+}
+
+.yellow {
+  background: $thirdAlt;
+}
+.green {
+  background: $green;
+}
+.blue {
+  background: $blue;
+}

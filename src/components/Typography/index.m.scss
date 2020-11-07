@@ -1,0 +1,18 @@
+@import 'src/styles/variables.scss';
+
+.root {
+  color: $dark;
+  margin: 0;
+}
+.small {
+  font-style: normal;
+}
+.normal {
+  font-style: normal;
+}
+.big {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+}

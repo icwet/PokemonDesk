@@ -15,6 +15,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
   },
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/,
+    poll: 1000,
+  },
   module: {
     rules: [
       {
@@ -37,7 +42,7 @@ module.exports = {
               modules: {
                 mode: 'local',
                 localIdentName: '[local]__[hash:base64:6]',
-                auto: /\.module\.\w+$/i,
+                auto: /\.m\.\w+$/i,
               },
             },
           },
@@ -45,7 +50,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(woff(2)?|ttf|eot|svg)(png|jpe?g|gif)?$/,
+        test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
             loader: 'file-loader',
@@ -54,6 +59,14 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
+        use: ['url-loader'],
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
       },
     ],
   },
@@ -66,6 +79,7 @@ module.exports = {
     port: 3000,
     open: false,
     hot: true,
+    historyApiFallback: true,
   },
   devtool: 'source-map',
 };
