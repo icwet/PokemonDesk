@@ -24,7 +24,7 @@ const PokemonCard: FC<Readonly<PokemonCardProps>> = ({ pokemon }) => {
       </PokemonCardStats>
       <PokemonCardLabels>
         {pokemon.abilities.map((ability, i) => (
-          <Label theme={i === 0 ? 'green' : 'blue'} value={ability} />
+          <Label key={ability} theme={i === 0 ? 'green' : 'blue'} value={ability} />
         ))}
       </PokemonCardLabels>
       <PokemonCardPicture background={pokemon.types[0]} href={pokemon.img} />

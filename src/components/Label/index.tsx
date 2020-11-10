@@ -10,7 +10,7 @@ interface LabelProps {
   value: string;
 }
 
-const Label: FC<LabelProps> = ({ theme, value }) => {
+const Label: FC<Readonly<LabelProps>> = ({ theme, value }) => {
   return <div className={cn(s.root, s[theme])}>{value}</div>;
 };
 
