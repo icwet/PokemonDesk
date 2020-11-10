@@ -5,51 +5,27 @@ import HeaderLogo from 'components/Header/-Logo';
 import HeaderMenu from 'components/Header/-Menu';
 import HeaderContent from 'components/Header/-Content';
 import AppLink from 'components/AppLink';
+// Routing
+import { GeneralMenu } from 'routes';
+import { usePath } from 'hookrouter';
 // Styles
 import s from './index.m.scss';
 
-interface MenuItems {
-  id: number;
-  text: string;
-  href: string;
-}
-
-const menuItems: Array<Readonly<MenuItems>> = [
-  {
-    id: 0,
-    text: 'Home',
-    href: '/',
-  },
-  {
-    id: 1,
-    text: 'Pokédex',
-    href: '/pokedex',
-  },
-  {
-    id: 2,
-    text: 'Legendaries',
-    href: '#',
-  },
-  {
-    id: 3,
-    text: 'Documentation',
-    href: '#',
-  },
-];
-
 const Header: FC = () => {
+  const currentPath = usePath();
+
   return (
     <header className={s.root}>
       <Layout>
         <HeaderContent>
           <HeaderLogo />
           <HeaderMenu>
-            {menuItems.map((menuItem) => (
-              <li key={menuItem.id}>
+            {GeneralMenu.map((menuItem) => (
+              <li key={menuItem.title}>
                 <AppLink
-                  href={menuItem.href}
-                  linkText={menuItem.text}
-                  classNames={[s.link, { [s.active]: window.location.pathname === menuItem.href }]}
+                  href={menuItem.link}
+                  linkText={menuItem.title}
+                  classNames={[s.link, { [s.active]: currentPath === menuItem.link }]}
                 />
               </li>
             ))}

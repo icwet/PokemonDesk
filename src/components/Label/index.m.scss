@@ -1,0 +1,23 @@
+@import 'src/styles/variables';
+.root {
+  width: max-content;
+  padding: 2px 8px;
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+  border-radius: 11px;
+  font-size: 12px;
+  color: currentColor;
+}
+
+.ghost {
+  padding: 0;
+  color: #4b4b4b;
+  border-radius: unset;
+  box-shadow: unset;
+}
+
+.blue {
+  background: $blue;
+}
+.green {
+  background: $green;
+}

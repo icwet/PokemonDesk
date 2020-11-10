@@ -1,8 +1,10 @@
 .root {
+  position: relative;
   font-style: normal;
+  margin: 0;
+  z-index: 12;
 }
 .h1 {
-  margin: 0;
   font: {
     weight: lighter;
     style: normal;
@@ -28,10 +30,6 @@
     weight: bold;
   }
   line-height: 21px;
-}
-.h4 {
-  color: inherit;
-}
-.h5 {
-  color: inherit;
+  margin-bottom: 8px;
+  text-shadow: 4px 4px 4px rgba(33, 33, 33, 0.1);
 }

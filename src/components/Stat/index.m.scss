@@ -1,0 +1,13 @@
+.root {
+  max-width: fit-content;
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: center;
+}
+
+.circle {
+  padding: 8px;
+  margin-bottom: 4px;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+}

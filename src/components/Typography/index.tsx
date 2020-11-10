@@ -3,8 +3,8 @@ import cn from 'classnames';
 // Styles
 import s from './index.m.scss';
 
-type TypographyVariants = 'p' | 'small';
-type TypographySize = 'small' | 'normal' | 'big';
+type TypographyVariants = 'p';
+type TypographySize = 'big';
 
 interface TypographyProps {
   variant: TypographyVariants;
