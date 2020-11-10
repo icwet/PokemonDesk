@@ -14,7 +14,7 @@ interface PokemonCardProps {
   pokemon: IPokemon;
 }
 
-const PokemonCard: FC<PokemonCardProps> = ({ pokemon }) => {
+const PokemonCard: FC<Readonly<PokemonCardProps>> = ({ pokemon }) => {
   return (
     <div className={s.root}>
       <Heading variant="h3">{pokemon.name}</Heading>
