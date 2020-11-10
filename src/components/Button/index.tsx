@@ -15,13 +15,13 @@ interface ButtonProps {
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: FC<Readonly<ButtonProps>> = ({ text, size, theme, href }) => {
+const Button: FC<Readonly<ButtonProps>> = ({ text, size, theme, href, onClick }) => {
   return href ? (
     <A className={cn(s.root, s[size], s[theme])} href={href}>
       {text}
     </A>
   ) : (
-    <button type="button" className={cn(s.root, s[size], s[theme])}>
+    <button onClick={onClick} type="button" className={cn(s.root, s[size], s[theme])}>
       {text}
     </button>
   );

@@ -1,0 +1,29 @@
+.root {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.backText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 43vw;
+  font-weight: bold;
+  text-align: center;
+  opacity: 50%;
+  filter: drop-shadow(4px 4px 24px rgba(1, 17, 38, 0.2));
+  z-index: -1;
+  user-select: none;
+}
+
+.image {
+  position: relative;
+  max-width: 690px;
+  z-index: 2;
+  user-select: none;
+}
