@@ -1,0 +1,14 @@
+.root {
+  display: grid;
+  grid-auto-flow: row;
+  padding: 120px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-weight: bold;
+  &:first-child {
+    color: #fff;
+  }
+}

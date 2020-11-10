@@ -1,0 +1,51 @@
+.root {
+  top: 0;
+  right: 0;
+  position: absolute;
+  max-height: 100%;
+  max-width: 50%;
+  z-index: 10;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.img {
+  width: 100%;
+}
+
+.grass {
+  &:before {
+    background: linear-gradient(270deg, #64d368 0.15%, #64d368 70.88%);
+  }
+}
+
+.poison {
+  &:before {
+    background: linear-gradient(270deg, #64d368 0.15%, #64d368 70.88%);
+  }
+}
+
+.fire {
+  &:before {
+    background: linear-gradient(270deg, #b33327 0.15%, #d93e30 100%);
+  }
+}
+
+.water {
+  &:before {
+    background: linear-gradient(270deg, #5bc7fa 0.15%, #35baff 100%);
+  }
+}
+
+.bug {
+  &:before {
+    background: linear-gradient(270deg, #64d368 0.15%, #64d368 70.88%);
+  }
+}

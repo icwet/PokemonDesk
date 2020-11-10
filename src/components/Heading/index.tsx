@@ -3,7 +3,7 @@ import cn from 'classnames';
 // Styles
 import s from './index.m.scss';
 
-type HeadingVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'h5';
+type HeadingVariants = 'h1' | 'h2' | 'h3';
 
 interface HeadingProps {
   variant: HeadingVariants;

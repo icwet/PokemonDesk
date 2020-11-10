@@ -1,6 +1,6 @@
 import React, { FC, MouseEvent } from 'react';
 import cn from 'classnames';
-import { Link } from 'react-router-dom';
+import { A } from 'hookrouter';
 // Styles
 import s from './index.m.scss';
 
@@ -15,13 +15,13 @@ interface ButtonProps {
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: FC<Readonly<ButtonProps>> = ({ text, size, theme, href }) => {
+const Button: FC<Readonly<ButtonProps>> = ({ text, size, theme, href, onClick }) => {
   return href ? (
-    <Link to={href} className={cn(s.root, s[size], s[theme])}>
+    <A className={cn(s.root, s[size], s[theme])} href={href}>
       {text}
-    </Link>
+    </A>
   ) : (
-    <button type="button" className={cn(s.root, s[size], s[theme])}>
+    <button onClick={onClick} type="button" className={cn(s.root, s[size], s[theme])}>
       {text}
     </button>
   );

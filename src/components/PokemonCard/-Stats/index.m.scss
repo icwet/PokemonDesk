@@ -1,0 +1,8 @@
+.root {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 12px;
+  z-index: 12;
+}
