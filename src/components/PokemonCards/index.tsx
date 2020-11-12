@@ -2,40 +2,46 @@ import React, { FC } from 'react';
 // Components
 import PokemonCard from 'components/PokemonCard';
 import Layout from 'components/Layout';
-import { PokemonTypes } from 'components/PokemonCard/-Picture';
-// Data
-import data from './data.json';
+import Typography from 'components/Typography';
+import { PokemonData } from 'pages/Pokedex/types';
 // Styles
 import s from './index.m.scss';
 
-export interface IPokemon {
-  nameClean: string;
-  abilities: Array<string>;
-  stats: {
-    hp: number;
-    attack: number;
-    defense: number;
-    'special-attack': number;
-    'special-defense': number;
-    speed: number;
-  };
-  types: Array<PokemonTypes>;
-  img: string;
-  name: string;
-  baseExperience: number;
-  height: number;
-  id: number;
-  isDefault: boolean;
-  order: number;
-  weight: number;
+interface PokemonCardsProps {
+  pokemons: PokemonData | null;
+  loading: boolean;
+  error: string;
 }
 
-const PokemonCards: FC = () => {
-  const pokemons: IPokemon[] = data;
+const PokemonCards: FC<PokemonCardsProps> = ({ pokemons, loading, error }) => {
+  if (loading) {
+    return (
+      <Layout>
+        <div className={s.info}>
+          <Typography variant="p" size="big">
+            ...loading
+          </Typography>
+        </div>
+      </Layout>
+    );
+  }
+
+  if (error) {
+    return (
+      <Layout>
+        <div className={s.info}>
+          <Typography variant="p" size="big">
+            {error}
+          </Typography>
+        </div>
+      </Layout>
+    );
+  }
+
   return (
     <Layout>
       <div className={s.root}>
-        {pokemons.map((pokemon: IPokemon) => (
+        {pokemons?.pokemons.map((pokemon) => (
           <PokemonCard pokemon={pokemon} key={pokemon.id} />
         ))}
       </div>

@@ -1,10 +1,17 @@
-import React, { FC } from 'react';
+import React, { FC, memo } from 'react';
+import cn from 'classnames';
 // Components
 import Layout from 'components/Layout';
 import AppLink from 'components/AppLink';
 import FooterContent from 'components/Footer/-Content';
 // Styles
 import s from './index.m.scss';
+
+type FooterThemes = 'transparent' | 'yellow';
+
+interface FooterProps {
+  theme: FooterThemes;
+}
 
 interface FooterItems {
   id: number;
@@ -35,9 +42,9 @@ const footerItems: Array<FooterItems> = [
   },
 ];
 
-const Footer: FC = () => {
+const Footer: FC<Readonly<FooterProps>> = ({ theme }) => {
   return (
-    <footer className={s.root}>
+    <footer className={cn(s.root, s[theme])}>
       <Layout>
         <FooterContent>
           {footerItems.map((footerItem) => (
@@ -56,4 +63,4 @@ const Footer: FC = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

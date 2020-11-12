@@ -1,5 +1,7 @@
 import React from 'react';
+// Routing
 import { navigate } from 'hookrouter';
+import { LinkEnum } from 'routes';
 // Components
 import Heading from 'components/Heading';
 import Button from 'components/Button';
@@ -16,7 +18,7 @@ const Error404 = () => {
         <Heading variant="h2">
           <span className={s.text}>The rocket team</span> <span className={s.text}>has won this time.</span>
         </Heading>
-        <Button onClick={() => navigate('/')} text="Return" size="default" theme="yellow" />
+        <Button onClick={() => navigate(LinkEnum.HOME)} text="Return" size="default" theme="yellow" />
       </Error404Content>
     </section>
   );
