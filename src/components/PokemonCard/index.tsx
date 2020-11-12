@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 // Components
-import { IPokemon } from 'components/PokemonCards';
 import Heading from 'components/Heading';
 import Label from 'components/Label';
 import Stat from 'components/Stat';
+import { IPokemon } from 'pages/Pokedex/types';
 import PokemonCardStats from './-Stats';
 import PokemonCardLabels from './-Labels';
 import PokemonCardPicture from './-Picture';

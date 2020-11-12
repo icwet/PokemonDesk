@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
+// Types
+import { PokemonTypes } from 'pages/Pokedex/types';
 // Styles
 import s from './index.m.scss';
-
-export type PokemonTypes = 'grass' | 'fire' | 'bug' | 'poison' | 'water';
 
 interface PokemonCardPictureProps {
   href: string;

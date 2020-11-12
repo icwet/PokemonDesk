@@ -46,6 +46,24 @@
 
 .bug {
   &:before {
+    background: linear-gradient(270deg, #f89eae 0.15%, #f4b5c1 100%);
+  }
+}
+
+.normal {
+  &:before {
     background: linear-gradient(270deg, #64d368 0.15%, #64d368 70.88%);
+  }
+}
+
+.ground {
+  &:before {
+    background: linear-gradient(270deg, #64d368 0.15%, #64d368 70.88%);
+  }
+}
+
+.electric {
+  &:before {
+    background: linear-gradient(270deg, #f2cb07 0.15%, #f2b807 100%);
   }
 }
