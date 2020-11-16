@@ -15,8 +15,8 @@ function useDataFetch<T>(
   useEffect(() => {
     const getData = async () => {
       try {
-        const result = await request(url, params);
-        setResult(result);
+        const json = await request(url, params);
+        setResult(json);
       } catch (e) {
         setError(e.toString());
       } finally {
