@@ -8,7 +8,7 @@ interface IGeneralMenu {
   component: () => JSX.Element;
 }
 
-export enum LinkEnum {
+export const enum LinkEnum {
   HOME = '/',
   POKEDEX = '/pokedex',
   LEGENDARIES = '/legendaries',

@@ -1,4 +1,7 @@
+export type QueryParams = { [K: string]: string | number };
+
 export type PokemonTypes = 'grass' | 'fire' | 'bug' | 'poison' | 'water' | 'normal' | 'electric';
+
 export type PokemonStats = {
   hp: number;
   attack: number;
@@ -7,13 +10,12 @@ export type PokemonStats = {
   'special-defense': number;
   speed: number;
 };
-export type PokemonAbilities = Array<string>;
 
 export interface IPokemon {
   name_clean: string;
-  abilities: PokemonAbilities;
+  abilities: Array<string>;
   stats: PokemonStats;
-  types: PokemonTypes[];
+  types: Array<PokemonTypes>;
   img: string;
   name: string;
   base_experience: number;
@@ -28,6 +30,6 @@ export interface PokemonData {
   count: number;
   limit: number;
   offset: number;
-  pokemons: IPokemon[];
+  pokemons: Array<IPokemon>;
   total: number;
 }

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import cn from 'classnames';
 // Types
-import { PokemonTypes } from 'pages/Pokedex/types';
+import { PokemonTypes } from 'api/types';
 // Styles
 import s from './index.m.scss';
 

@@ -3,8 +3,8 @@ import React, { FC } from 'react';
 import PokemonCard from 'components/PokemonCard';
 import Layout from 'components/Layout';
 import Typography from 'components/Typography';
-import { PokemonData } from 'pages/Pokedex/types';
 // Styles
+import { PokemonData } from 'api/types';
 import s from './index.m.scss';
 
 interface PokemonCardsProps {

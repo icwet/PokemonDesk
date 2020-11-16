@@ -1,0 +1,18 @@
+@import 'src/styles/variables';
+
+.root {
+  all: unset;
+}
+
+.search {
+  padding: 16px 31px;
+  background: $white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+}
+
+.inputWrapper {
+  display: grid;
+  grid-auto-flow: column;
+  padding-top: 34px;
+}
