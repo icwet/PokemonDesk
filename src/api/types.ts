@@ -1,4 +1,8 @@
-export type QueryParams = { [K: string]: string | number };
+export interface QueryParams {
+  id: string;
+  name: string;
+  limit: string;
+}
 
 export type PokemonTypes = 'grass' | 'fire' | 'bug' | 'poison' | 'water' | 'normal' | 'electric';
 
@@ -11,7 +15,7 @@ export type PokemonStats = {
   speed: number;
 };
 
-export interface IPokemon {
+export interface Pokemon {
   name_clean: string;
   abilities: Array<string>;
   stats: PokemonStats;
@@ -30,6 +34,6 @@ export interface PokemonData {
   count: number;
   limit: number;
   offset: number;
-  pokemons: Array<IPokemon>;
+  pokemons: Array<Pokemon>;
   total: number;
 }

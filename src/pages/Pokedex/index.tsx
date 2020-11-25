@@ -14,13 +14,11 @@ import s from './index.m.scss';
 
 const Pokedex: FC = () => {
   const [inputData, setInputData] = useState('');
-  const [query, setQuery] = useState<QueryParams>({});
+  const [query, setQuery] = useState<Partial<QueryParams>>({ limit: '20' });
   const debouncedInputData = useDebounce(inputData, 1000);
-  const { result, isLoading, error } = useDataFetch<Readonly<PokemonData>>(
-    EndPoints.getPokemons,
-    { limit: 20, ...query },
-    [debouncedInputData],
-  );
+  const { result, isLoading, error } = useDataFetch<Readonly<PokemonData>>(EndPoints.getPokemons, query, [
+    debouncedInputData,
+  ]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setInputData(event.target.value);

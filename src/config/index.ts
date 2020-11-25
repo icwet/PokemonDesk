@@ -16,6 +16,12 @@ const config = {
           },
         },
       },
+      getPokemon: {
+        method: 'GET',
+        url: {
+          pathname: '/api/v1/pokemon/{id}',
+        },
+      },
     },
   },
 };

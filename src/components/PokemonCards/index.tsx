@@ -2,10 +2,11 @@ import React, { FC } from 'react';
 // Components
 import PokemonCard from 'components/PokemonCard';
 import Layout from 'components/Layout';
-import Typography from 'components/Typography';
 // Styles
 import { PokemonData } from 'api/types';
 import s from './index.m.scss';
+import Error from '../Error';
+import Loading from '../Loading';
 
 interface PokemonCardsProps {
   pokemons: PokemonData | null;
@@ -15,27 +16,11 @@ interface PokemonCardsProps {
 
 const PokemonCards: FC<PokemonCardsProps> = ({ pokemons, loading, error }) => {
   if (loading) {
-    return (
-      <Layout>
-        <div className={s.info}>
-          <Typography variant="p" size="big">
-            ...loading
-          </Typography>
-        </div>
-      </Layout>
-    );
+    return <Loading />;
   }
 
   if (error) {
-    return (
-      <Layout>
-        <div className={s.info}>
-          <Typography variant="p" size="big">
-            {error}
-          </Typography>
-        </div>
-      </Layout>
-    );
+    return <Error title="Something went wrong" errorMessage={error} />;
   }
 
   return (

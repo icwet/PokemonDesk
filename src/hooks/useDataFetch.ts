@@ -5,7 +5,7 @@ import { QueryParams } from 'api/types';
 
 function useDataFetch<T>(
   url: EndPoints,
-  params?: QueryParams,
+  params?: Partial<QueryParams>,
   deps: any[] = [],
 ): { result: T | null; isLoading: boolean; error: string } {
   const [isLoading, setIsLoading] = useState<boolean>(true);

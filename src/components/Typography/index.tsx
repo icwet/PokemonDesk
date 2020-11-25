@@ -4,7 +4,7 @@ import cn from 'classnames';
 import s from './index.m.scss';
 
 type TypographyVariants = 'p';
-type TypographySize = 'big';
+type TypographySize = 'big' | 'small';
 
 interface TypographyProps {
   variant: TypographyVariants;
