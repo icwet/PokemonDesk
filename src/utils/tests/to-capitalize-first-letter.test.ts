@@ -20,4 +20,9 @@ describe('toCapitalizeFirstLetter', () => {
     const result = toCapitalizeFirstLetter(' stRIng');
     expect(result).toBe('String');
   });
+
+  test('Fn expect one argument "", should be return ""', () => {
+    const result = toCapitalizeFirstLetter('');
+    expect(result).toBe('');
+  });
 });
