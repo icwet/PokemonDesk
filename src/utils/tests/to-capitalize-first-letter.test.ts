@@ -17,7 +17,7 @@ describe('toCapitalizeFirstLetter', () => {
   });
 
   test('Fn expect one argument " string", should be return " string"', () => {
-    const result = toCapitalizeFirstLetter(' string');
-    expect(result).toBe(' string');
+    const result = toCapitalizeFirstLetter(' stRIng');
+    expect(result).toBe('String');
   });
 });
