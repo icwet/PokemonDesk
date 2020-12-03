@@ -13,12 +13,12 @@ module.exports = {
   },
   plugins: ['prettier', 'prettier', 'react', '@typescript-eslint'],
   rules: {
+    'import/no-extraneous-dependencies': 'off',
+    'no-console': 'off',
     'no-shadow': 'off',
     camelcase: 'off',
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'react/prop-types': 0,
     '@typescript-eslint/no-unused-vars': 'error',
-    'no-console': 'error',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx', '.ts', '.js'] }],
     'import/extensions': [
       'error',
