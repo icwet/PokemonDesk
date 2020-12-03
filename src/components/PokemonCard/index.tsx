@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import Heading from 'components/Heading';
 import Label from 'components/Label';
 import Stat from 'components/Stat';
-import { IPokemon } from 'pages/Pokedex/types';
+import { Pokemon } from 'api/types';
 import PokemonCardStats from './-Stats';
 import PokemonCardLabels from './-Labels';
 import PokemonCardPicture from './-Picture';
@@ -11,7 +11,7 @@ import PokemonCardPicture from './-Picture';
 import s from './index.m.scss';
 
 interface PokemonCardProps {
-  pokemon: IPokemon;
+  pokemon: Pokemon;
 }
 
 const PokemonCard: FC<Readonly<PokemonCardProps>> = ({ pokemon }) => {
